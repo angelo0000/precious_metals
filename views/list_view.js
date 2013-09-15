@@ -1,4 +1,4 @@
-Cashflow.ItemListView = Cashflow.BaseView.extend({
+PreciousMetals.ItemListView = PreciousMetals.BaseView.extend({
 
   template:  _.template($("#template-item-list").html()),
 
@@ -21,7 +21,7 @@ Cashflow.ItemListView = Cashflow.BaseView.extend({
       $loading = $('<p>Loading Chart Data...</p>').css("color", "white").css("text-align", "center").css("margin-top", "90px").css('font-size', "30px").css("font-family", '"Lucida Grande","Lucida Sans Unicode",Verdana,Arial,Helvetica,sans-serif');
       $('#itemChart').append($loading);
 
-      Cashflow.LiveData.get(function(data){
+      PreciousMetals.LiveData.get(function(data){
          $view.lastUpdated = data.lastUpdated;
          var goldRow = $("li", $el).eq(0);
          var silverRow = $("li", $el).eq(1);
@@ -57,7 +57,7 @@ Cashflow.ItemListView = Cashflow.BaseView.extend({
             .find("div span.percent").html(data.palladium.changePercent + "%")
             .parent().addClass(data.palladium.up ? "up" : "down");
 
-        Cashflow.HistoricalData.get(function(response){
+        PreciousMetals.HistoricalData.get(function(response){
             $view.graphData = response;
             $view.drawChart('gold');
         });
@@ -175,4 +175,4 @@ Cashflow.ItemListView = Cashflow.BaseView.extend({
   },
 
 });
-Cashflow.itemListView = new Cashflow.ItemListView();
+PreciousMetals.itemListView = new PreciousMetals.ItemListView();
