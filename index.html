@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<title>Precious Metals</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+	<div id="content" class="container">
+	</div>
+
+	<script type="text/html" id="template-item-list">
+	    <div id="itemsWrapper">
+        <ul id="items">
+            <li id="goldRow" class="item odd first selected">
+                <div class="title">Gold</div>
+                <div class="button variable_data button_green">
+                    <div class="">
+                        <span class="dollar">* * * *</span>
+                        <span class="percent">* * * *</span>
+                    </div>
+                </div>
+                <div class="current_value">* * * *</div>
+                <div class="clear"></div>
+            </li>
+            <li id="silverRow" class="item even">
+                <div class="title">Silver</div>
+                <div class="button variable_data button_green">
+                    <div class="">
+                        <span class="dollar">* * * *</span>
+                        <span class="percent">* * * *</span>
+                    </div>
+                </div>
+                <div class="current_value">* * * *</div>
+                <div class="clear"></div>
+            </li>
+            <li id="platinumRow" class="item odd">
+                <div class="title">Platinum</div>
+                <div class="button variable_data button_green">
+                    <div class="">
+                        <span class="dollar">* * * *</span>
+                        <span class="percent">* * * *</span>
+                    </div>
+                </div>
+                <div class="current_value">* * * *</div>
+                <div class="clear"></div>
+            </li>
+            <li id="palladiumRow" class="item even last">
+                <div class="title">Palladium</div>
+                <div class="button button_green variable_data">
+                    <div class="">
+                        <span class="dollar">* * * *</span>
+                        <span class="percent">* * * *</span>
+                    </div>
+                </div>
+                <div class="current_value">* * * *</div>
+                <div class="clear"></div>
+            </li>
+
+        </ul>
+        </div>
+
+        <div id="itemChart">
+        </div>
+    </script>
+
+	<!-- Common Libs -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/json2.js"></script>
+	<script src="assets/js/underscore_dev.js"></script>
+	<script src="assets/js/backbone_dev.js"></script>
+    <script src="assets/js/dygraphs.js"></script>
+
+	<!-- App Context -->
+	<script src="app.js"></script>
+
+	<!-- Controllers -->
+	<script src="controllers/cashflow_controller.js"></script>
+
+	<!-- Models -->
+	<script src="models/live_data.js"></script>
+	<script src="models/historical_data.js"></script>
+
+	<!-- Views -->
+	<script src="views/base.js"></script>
+	<script src="views/list_view.js"></script>
+
+	<!-- Glue -->
+	<script src="setup.js"></script>
+
+
+</body>
+</html>
+
